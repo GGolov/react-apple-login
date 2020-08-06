@@ -73,7 +73,7 @@ export interface AppleLoginProps {
   responseType?: "code" | "id_token";
   /**
    * The type of response mode expected.
-   * Valid values are query, fragment, and form_post.
+   * Valid values are query, fragment, form_post, and web_message.
    * If you requested any scopes, the value must be form_post.
    */
   responseMode?: "query" | "fragment" | "form_post" | "web_message";
@@ -82,6 +82,7 @@ export interface AppleLoginProps {
    * This value is also used to mitigate replay attacks.
    */
   nonce?: string;
+  /** Show the Apple Login form in a popup window or not, default is false. */
   usePopup?: boolean;
   /**
    * The customizable attributes of the AppleLogin button.

@@ -38,7 +38,7 @@ class Example extends React.Component {
 |    scope     |  string  |                  -                   |     The amount of user information requested from Apple. Valid values are name and email. You can request one, both, or none.             |
 | redirectURI |  string  |                   REQUIRED                  | The URI to which the authorization redirects. |
 | responseType |  string  |                   code                  | The type of response requested. Valid values are code and id_token. You can request one or both. When requesting an id_token response type, response_mode must be either fragment or form_post. |
-| responseMode |  string  |                   query                  | The type of response mode expected. Valid values are query, fragment, and form_post. If you requested any scopes, the value must be form_post. |
+| responseMode |  string  |                   query                  | The type of response mode expected. Valid values are query, fragment, form_post and web_message. If you requested any scopes, the value must be form_post. |
 |     state    |  string  |             -            |         The current state of the request.         |
 |     autoLoad    |  boolean  |             false            |         -         |
 |     nonce    |  string  |             -            |         A String value used to associate a client session with an ID token. This value is also used to mitigate replay attacks.         |
@@ -52,6 +52,7 @@ class Example extends React.Component {
 |     designProp.locale    |  string  |             en_US            |        The language used for text on the button.     |
 |     render    |  function  |             -            |        Render prop to use a custom element, use renderProps.onClick   |
 |     callback    |  function  |             -            |      callback only work with Response Mode query.   |
+|     usePopup    |  boolean  |             false            |      Show the Apple Login form in a popup window or not, default is false.   |
 
 
 ## Production Bundle
